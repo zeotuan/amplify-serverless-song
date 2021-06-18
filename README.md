@@ -37,10 +37,15 @@ npm start
 
 ## 🔑 SETTING UP IAM FOR AUTHORIZATION IN AWS:
 1. GO TO AWS CONSOLE IAM SECTION WITH THIS LINK: https://console.aws.amazon.com/iam 
+
 2. Navigate to the roles section
+
 3. Find the auth and unauth role that have name in form of: <YourAppName>-<Number>-authRole/unauthRole
+
 4. For the authRole add an inline Policy in form of Json that have the below structure:
+
 These policy allow authenticated user to use the graphql api to create, update and list songs
+
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -56,8 +61,10 @@ These policy allow authenticated user to use the graphql api to create, update a
         }
     ]
 }
+
 5. For  the unAuthRole add twp seperate inline Policy in form of Json that have the below structure:
 First policy: This allow unauth user to be able to have read access to S3 bucket which store songs audio
+
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -72,7 +79,9 @@ First policy: This allow unauth user to be able to have read access to S3 bucket
         }
     ]
 }
+
 Second Policy: this allow unauth user to be able to have access to graphql api which return list of songs
+
 {
     "Version": "2012-10-17",
     "Statement": [
