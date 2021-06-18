@@ -60,7 +60,8 @@ These policy allow authenticated user to use the graphql api to create, update a
             ]
         }
     ]
-}```
+}
+```
 
 5. For  the unAuthRole add twp seperate inline Policy in form of Json that have the below structure:
 First policy: This allow unauth user to be able to have read access to S3 bucket which store songs audio
@@ -78,7 +79,8 @@ First policy: This allow unauth user to be able to have read access to S3 bucket
             "Effect": "Allow"
         }
     ]
-}```
+}
+```
 
 Second Policy: this allow unauth user to be able to have access to graphql api which return list of songs
 
@@ -93,5 +95,6 @@ Second Policy: this allow unauth user to be able to have access to graphql api w
             "Resource": "arn:aws:appsync:<REGION>:<ACCOUNT>:apis/<APP-ID>/types/Query/fields/listSongs"
         }
     ]
-}```
+}
+```
 
