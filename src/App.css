@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.songCard{
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+
+}
+
+.songList{
+  display: flex;
+  flex-direction: column;
+}
+
+.songTitle{
+  font-weight: bold;
+  
+}
+
+.myAudioPlayer{
+  display: flex;
+  justify-content: center;
+}
+
+.playerContainer{
+  position: absolute;
+  bottom: 0%;
+}
